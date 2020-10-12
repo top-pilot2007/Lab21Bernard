@@ -1,0 +1,23 @@
+﻿@model MovieRegistration.Models.RegisteredMovieModel
+
+@{
+    ViewData["Title"] = "RegisteredMovie";
+}
+
+
+<h4>Your Movie is registered</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <ul>
+            <li>
+                <span> @Model.Title</span>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to Registration</a>
+</div>
+
