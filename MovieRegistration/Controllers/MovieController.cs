@@ -10,12 +10,19 @@ namespace MovieRegistration.Controllers
 {
     public class MovieController : Controller
     {
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public IActionResult Index(MovieModel model)
+        [HttpGet]
+        public IActionResult Index()
         {
 
             return View();
+        }
+
+        [HttpPost]
+        public IActionResult RegisteredMovie(MovieModel movieModel)
+        {
+            var registeredMovieModel = new RegisteredMovieModel { Title=movieModel.Title};
+
+            return View(registeredMovieModel);
         }
     }
 }
