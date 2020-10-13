@@ -11,7 +11,7 @@ namespace MovieRegistration.Models
         public string Title { get; set; }
         public MovieGenreModel Genre { get; set; }
 
-        public int Year { get; set; }
+        public DateTime Year { get; set; }
         public string Actors { get; set; }
         public string Directors { get; set; }
     }
